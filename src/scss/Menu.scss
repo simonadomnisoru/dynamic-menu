@@ -1,0 +1,51 @@
+.Menu-Hamburg {
+    position: absolute;
+    top: $padding-sm;
+    right: $padding-sm;
+    .Item {
+        width: 25px;
+        height: 3px;
+        background: $primary-color;
+        margin: 3px 0 0 0;
+    }
+}
+
+.Menu-Slide {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: $primary-background-color-light;
+    overflow-x: hidden;
+    transition: 0.7s;
+    &.Open {
+        width: 80%;
+        transition: 0.7s;
+    }
+}
+
+.Menu-Slide-Items {
+    padding: $padding-xs $padding-xs $padding-xs $padding-md;
+    display: block;
+    &.Active {
+        color: purple;
+    }
+}
+
+.Menu-Hr {
+    margin-top: $margin-sm;
+    margin-bottom: $margin-xxl;
+}
+
+.Menu-Button {
+    padding: $padding-sm;
+    display: block;
+    font-size: 16px;
+    margin: 0 auto;
+    border-radius: 16px;
+    width: 80%;
+    border-style: solid;
+    border-color: $primary-color;
+}

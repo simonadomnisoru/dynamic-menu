@@ -1,38 +1,26 @@
-.Chart-Image {
+.Chart-Image,
+.Activity-Card  {
     width: 100%;
+    max-width: 400px;
 }
 
 .Activity-Title {
     text-align: left;
-    padding: 20px 10px 5px 10px;
+    padding: $padding-md $padding-sm $padding-xs $padding-sm;
     letter-spacing: .02rem;
 }
 
 .Activity-Card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    width: 100%;
+    box-shadow: 0 4px $padding-xs 0 rgba(0, 0, 0, 0.2);
     border-radius: 5px;
     height: 50px;
-    background-color: rgb(255, 255, 255);
+    background-color: $white-color;
     margin-top: 10px;
 }
 
 .Activity-Card-Avatar {
     border-radius: 50%;
     width: 20px;
-}
-
-.Menu-Hamburg {
-    position: absolute;
-    top: 15px;
-    right: 15px;
-}
-
-.Menu-Hamburg-Item {
-    width: 25px;
-    height: 3px;
-    background: $primary-color;
-    margin: 3px 0 0 0;
 }
 
 .Overlay {
@@ -42,19 +30,18 @@
     left: 0;
     right: 0;
     bottom: 0;
+    z-index: 1;
     background-color: $primary-background-color-light;
-    z-index: 2;
     cursor: pointer;
-}
-
-.Overlay-Show {
-    display: block;
+    &.Show {
+        display: block;
+    }
 }
 
 .Overlay-Close-Button {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    font-size: 30px;
+    top: $padding-sm;
+    right: $padding-sm;
+    font-size: 32px;
     color: $primary-color-light;
 }
