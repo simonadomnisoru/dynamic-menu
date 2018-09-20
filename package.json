@@ -1,0 +1,19 @@
+{
+    "name": "dynamic-menu",
+    "version": "0.1.0",
+    "private": true,
+    "dependencies": {
+        "node-sass": "^4.9.3",
+        "react": "^16.5.1",
+        "react-dom": "^16.5.1",
+        "react-scripts": "1.1.5"
+    },
+    "scripts": {
+        "start": "npm run watch && react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test --env=jsdom",
+        "eject": "react-scripts eject",
+        "scss-compile": "node-sass --output-style compressed ./src/scss/buddle.scss -o ./src/style/",
+        "watch": "npm run scss-compile"
+    }
+}

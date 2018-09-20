@@ -1,0 +1,60 @@
+.Chart-Image {
+    width: 100%;
+}
+
+.Activity-Title {
+    text-align: left;
+    padding: 20px 10px 5px 10px;
+    letter-spacing: .02rem;
+}
+
+.Activity-Card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    border-radius: 5px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    margin-top: 10px;
+}
+
+.Activity-Card-Avatar {
+    border-radius: 50%;
+    width: 20px;
+}
+
+.Menu-Hamburg {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.Menu-Hamburg-Item {
+    width: 25px;
+    height: 3px;
+    background: $primary-color;
+    margin: 3px 0 0 0;
+}
+
+.Overlay {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $primary-background-color-light;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.Overlay-Show {
+    display: block;
+}
+
+.Overlay-Close-Button {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    font-size: 30px;
+    color: $primary-color-light;
+}
