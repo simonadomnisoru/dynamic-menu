@@ -1,7 +1,7 @@
 import React from 'react';
 import '../style/buddle.css';
-import ChartImage from '../scss/chart.png';
-import AvatarImage from '../scss/avatar.png';
+import ChartImage from '../resources/chart.png';
+import AvatarImage from '../resources/avatar.png';
 
 const ActivityCard = () => (
     <div className="Activity-Card">
