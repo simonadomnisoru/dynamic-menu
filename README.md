@@ -7,6 +7,7 @@ A navigation menu create using pure CSS and React
 
 ## Run in local enviroment.
    - npm start
+   - Open the borwser in the mobile view. In Chrome open Inspector (Ctrl + Shift + I) and Toggle device toolbar (Ctrl + Shift + M)
 
 ## Demo
 ![demo](https://user-images.githubusercontent.com/6817073/45890540-83a98f00-bdc3-11e8-8709-2b4678897ba9.gif)
