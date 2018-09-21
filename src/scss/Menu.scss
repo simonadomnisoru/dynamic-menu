@@ -17,21 +17,26 @@
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: $primary-background-color-light;
+    padding-top: 20px;
+    background-color: $white-color;
     transition: all .3s linear;
     box-shadow: 0 4px $padding-xs 0 rgba(0, 0, 0, 0.2);
     transform: translate3d(-100%, 0, 0);
+    color: $menu-items;
     &.Open {
         transform: translateZ(0);
     }
 }
 
 .Menu-Slide-Items {
-    padding: $padding-xs $padding-xs $padding-xs $padding-md;
+    padding: $padding-xs $padding-xs $padding-sm $padding-md;
     display: block;
     &.Active {
         color: $menu-active-item;
         font-weight: bold;
+    }
+    .Icon {
+        width: 40px;
     }
 }
 
@@ -45,8 +50,8 @@
     display: block;
     font-size: 16px;
     margin: 0 auto;
-    border-radius: 16px;
+    border-radius: 999px;
     width: 80%;
     border-style: solid;
-    border-color: $primary-color;
+    color:rgb(136, 148, 161);
 }

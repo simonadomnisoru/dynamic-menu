@@ -43,14 +43,17 @@ const menuItems = [
 const MenuSlide = (props) => {
     return (
         <div className={`Menu-Slide ${props.slideClass}`}>
-            <ul>
-                {menuItems.map((data, index) => {
-                    const activeItem = data.active ? 'Active' : '';
-                    return <li key={`menu-slide-items-${data.id}`} className={`Menu-Slide-Items ${activeItem}`}>
-                        {data.icon && <FontAwesomeIcon icon={data.icon}/>}{data.name}
-                    </li>
-                })}
-            </ul>
+            <table>
+                <tbody>
+                    {menuItems.map((data, index) => {
+                        const activeItem = data.active ? 'Active' : '';
+                        return <tr key={`menu-slide-items-${data.id}`} className={`Menu-Slide-Items ${activeItem}`}>
+                            <td className='Icon'>{data.icon && <FontAwesomeIcon icon={data.icon} />}</td>
+                            <td>{data.name}</td>
+                        </tr>
+                    })}
+                </tbody>
+            </table>
             <hr className='Menu-Hr' />
             <button className='Menu-Button'>Sing Out</button>
         </div>

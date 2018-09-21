@@ -1,13 +1,12 @@
 .Chart-Image,
-.Activity-Card  {
-    width: 100%;
-    //max-width: 400px;
+.Activity-Card {
+    width: 100%; //max-width: 400px;
 }
 
 .Activity-Title {
     text-align: left;
     padding: $padding-md $padding-sm $padding-xs $padding-sm;
-    letter-spacing: .02rem;
+    letter-spacing: .05rem;
 }
 
 .Activity-Card {
@@ -30,7 +29,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: $primary-background-color-light;
+    background-color: hsla(0, 0%, 89%, .9);
     &.Show {
         display: block;
     }

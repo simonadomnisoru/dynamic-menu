@@ -7,6 +7,8 @@ import MenuSlide from './Menu'
 const ActivityCard = () => (
     <div className="Activity-Card">
         <img src={AvatarImage} className='Activity-Card-Avatar' alt="Avatar" />
+        <span>From Anonymous</span>
+        <span>21.09.2018-21.09.2018</span>
     </div>
 );
 
