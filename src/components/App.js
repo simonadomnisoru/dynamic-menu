@@ -2,6 +2,7 @@ import React from 'react';
 import '../style/buddle.css';
 import ChartImage from '../resources/chart.png';
 import AvatarImage from '../resources/avatar.png';
+import MenuSlide from './Menu'
 
 const ActivityCard = () => (
     <div className="Activity-Card">
@@ -14,22 +15,6 @@ const HamburgMenu = (props) => {
     return menu.map((data, index) => { return <div key={`menu-hamburg-${index}`} className='Item' onClick={() => props.OnClick()}></div> })
 };
 
-const MenuSlide = (props) => {
-    const menuItems = ['WALLET', 'ALL Coins', 'Borrow', 'Contacts', 'Settings', 'CROWDSALE', 'SPECIAL OFFERS'];
-    return (
-        <div className={`Menu-Slide ${props.slideClass}`}>
-            <ul>
-                {menuItems.map((data, index) => {
-                    const activeItem = data === 'WALLET' ? 'Active' : '';
-                    return <li key={`menu-slide-items-${index}`} className={`Menu-Slide-Items ${activeItem}`}>{data}</li>
-                })}
-            </ul>
-            <hr className='Menu-Hr' />
-            <button className='Menu-Button'>Sing Out</button>
-        </div>
-    );
-
-}
 class App extends React.PureComponent {
     constructor() {
         super();
