@@ -1,6 +1,12 @@
 .Chart-Image,
 .Activity-Card {
-    width: 100%; //max-width: 400px;
+	width: 100%; //max-width: 400px;
+	.Red {
+		color: red;
+	}
+	.Green {
+		color:green;
+	}
 }
 
 .Activity-Title {
@@ -15,6 +21,13 @@
     height: 50px;
     background-color: $white-color;
     margin-top: 10px;
+}
+
+.Activity-Card-Table {
+	width: 100%;
+	height: 100%;
+	vertical-align: middle;
+	margin: 10px;
 }
 
 .Activity-Card-Avatar {
@@ -41,4 +54,8 @@
     right: $padding-sm;
     font-size: 32px;
     color: $primary-color-light;
+}
+
+.Text-Small {
+	font-size: 10px;
 }

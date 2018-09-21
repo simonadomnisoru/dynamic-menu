@@ -1,40 +1,28 @@
 import React from 'react';
 import '../style/buddle.css';
 import ChartImage from '../resources/chart.png';
-import AvatarImage from '../resources/avatar.png';
-import MenuSlide from './Menu'
-
-const ActivityCard = () => (
-    <div className="Activity-Card">
-        <img src={AvatarImage} className='Activity-Card-Avatar' alt="Avatar" />
-        <span>From Anonymous</span>
-        <span>21.09.2018-21.09.2018</span>
-    </div>
-);
+import MenuSlide from './Menu';
+import ActivityCard from './ActivityCard';
 
 const HamburgMenu = (props) => {
     const menu = [...Array(3)];
-    return menu.map((data, index) => { return <div key={`menu-hamburg-${index}`} className='Item' onClick={() => props.OnClick()}></div> })
+    return menu.map((data, index) => {
+        return <div key={`menu-hamburg-${index}`} className='Item' onClick={() => props.OnClick()}></div>;
+    });
 };
 
 class App extends React.PureComponent {
     constructor() {
         super();
-        this.state = {
-            cards: [...Array(4)]
-        }
-    }
-
-    renderActivityCards = () => {
-        return this.state.cards.map((data, index) => { return <ActivityCard key={`activity-card-${index}`} /> })
+        this.state = {};
     }
 
     handleClickHamburgIcon = () => {
-        this.setState({ overlayClass: 'Show', slideClass: 'Open' });
+        this.setState({overlayClass: 'Show', slideClass: 'Open'});
     }
 
     handleClickClose = () => {
-        this.setState({ overlayClass: '', slideClass: '' });
+        this.setState({overlayClass: '', slideClass: ''});
     }
     render() {
         return (
@@ -44,7 +32,7 @@ class App extends React.PureComponent {
                 <img src={ChartImage} className='Chart-Image' alt="ChartImage" />
                 <div className='Activity'>
                     <div className="Activity-Title">Activity</div>
-                    {this.renderActivityCards()}
+                    <ActivityCard />
                 </div>
                 <div className={`Overlay ${this.state.overlayClass}`}>
                     <div className="Overlay-Close-Button" onClick={() => this.handleClickClose()}>X</div>

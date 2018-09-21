@@ -1,6 +1,6 @@
 import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faWallet, faTag, faDollarSign } from '@fortawesome/free-solid-svg-icons';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faWallet, faTag, faDollarSign} from '@fortawesome/free-solid-svg-icons';
 
 const menuItems = [
     {
@@ -40,18 +40,21 @@ const menuItems = [
     }
 ];
 
+const menuItemsRender = menuItems.map((data, index) => {
+    const activeItem = data.active ? 'Active' : '';
+    return (
+        <tr key={`menu-slide-items-${data.id}`} className={`Menu-Slide-Items ${activeItem}`}>
+            <td className='Icon'>{data.icon && <FontAwesomeIcon icon={data.icon} />}</td>
+            <td>{data.name}</td>
+        </tr>);
+});
+
 const MenuSlide = (props) => {
     return (
         <div className={`Menu-Slide ${props.slideClass}`}>
             <table>
                 <tbody>
-                    {menuItems.map((data, index) => {
-                        const activeItem = data.active ? 'Active' : '';
-                        return <tr key={`menu-slide-items-${data.id}`} className={`Menu-Slide-Items ${activeItem}`}>
-                            <td className='Icon'>{data.icon && <FontAwesomeIcon icon={data.icon} />}</td>
-                            <td>{data.name}</td>
-                        </tr>
-                    })}
+                    {menuItemsRender}
                 </tbody>
             </table>
             <hr className='Menu-Hr' />
@@ -59,7 +62,6 @@ const MenuSlide = (props) => {
         </div>
     );
 
-}
-
+};
 
 export default MenuSlide;
