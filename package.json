@@ -19,7 +19,7 @@
         "build": "react-scripts build",
         "test": "react-scripts test --env=jsdom",
         "eject": "react-scripts eject",
-        "scss-compile": "node-sass --output-style compressed ./src/scss/buddle.scss -o ./src/style/",
+        "scss-compile": "node-sass --output-style compressed ./src/scss/_buddle.scss -o ./src/style/",
 		"watch": "npm run scss-compile",
 		"linter": "./node_modules/.bin/eslint --ext .jsx,.js src/"
     }

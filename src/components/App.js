@@ -1,5 +1,5 @@
 import React from 'react';
-import '../style/buddle.css';
+import '../style/_buddle.css';
 import ChartImage from '../resources/chart.png';
 import MenuSlide from './Menu';
 import ActivityCard from './ActivityCard';
@@ -17,25 +17,21 @@ class App extends React.PureComponent {
         this.state = {};
     }
 
-    handleClickHamburgIcon = () => {
-        this.setState({overlayClass: 'Show', slideClass: 'Open'});
-    }
-
-    handleClickClose = () => {
-        this.setState({overlayClass: '', slideClass: ''});
+    handleMenuSlide = (overlayClass, slideClass) => {
+        this.setState({overlayClass, slideClass});
     }
     render() {
         return (
             <div>
                 <MenuSlide slideClass={this.state.slideClass} />
-                <div className='Menu-Hamburg'><HamburgMenu OnClick={() => this.handleClickHamburgIcon()} /></div>
+                <div className='Menu-Hamburg'><HamburgMenu OnClick={() => this.handleMenuSlide('Show', 'Open')} /></div>
                 <img src={ChartImage} className='Chart-Image' alt="ChartImage" />
                 <div className='Activity'>
                     <div className="Activity-Title">Activity</div>
                     <ActivityCard />
                 </div>
                 <div className={`Overlay ${this.state.overlayClass}`}>
-                    <div className="Overlay-Close-Button" onClick={() => this.handleClickClose()}>X</div>
+                    <div className="Overlay-Close-Button" onClick={() => this.handleMenuSlide('', '')}>X</div>
                 </div>
             </div>
         );

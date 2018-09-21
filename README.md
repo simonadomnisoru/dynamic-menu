@@ -13,3 +13,7 @@ A navigation menu create using pure CSS and React
 
 ## Libraries used for development
    - [node-sass](https://github.com/sass/node-sass) used to compile .scss files to css
+   - [Fort Awesome](https://fontawesome.com/) icon used
+
+## Libraries used for testing
+   - [eslint](https://github.com/eslint/eslint) is a tool for identifying and reporting on patterns found in ECMAScript/JavaScript code.
